@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task2/Cards/locker_card.dart';
-import 'package:task2/Cards/navbar.dart';
-import 'package:task2/Cards/rocket_circle.dart';
+import 'package:task2/Components/navbar.dart';
+import 'package:task2/Components/rocket_circle.dart';
 import 'package:task2/Pages/passcode_setup.dart';
 
 class LockerPage extends StatelessWidget {

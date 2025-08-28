@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:task2/controllers/compressing_controller.dart';
-import 'package:task2/controllers/passcode_controller.dart';
-import 'package:task2/controllers/speed_test_controller.dart';
+import 'package:task2/Controllers/compressing_controller.dart';
+import 'package:task2/Controllers/passcode_controller.dart';
+import 'package:task2/Controllers/speed_test_controller.dart';
 
 class AppBinding extends Bindings {
   @override

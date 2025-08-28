@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task2/Cards/banner.dart';
-import 'package:task2/Cards/navbar.dart';
-import 'package:task2/Cards/rocket_circle.dart';
-import 'package:task2/Cards/settings_option.dart';
+import 'package:task2/Components/banner.dart';
+import 'package:task2/Components/navbar.dart';
+import 'package:task2/Components/rocket_circle.dart';
+import 'package:task2/Cards/settings_option_card.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});

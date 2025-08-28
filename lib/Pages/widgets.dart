@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task2/Cards/banner.dart';
-import 'package:task2/Cards/build_widgets.dart';
+import 'package:task2/Components/banner.dart';
+import 'package:task2/Components/build_widgets.dart';
 
 class WidgetsPage extends StatefulWidget {
   const WidgetsPage({super.key});

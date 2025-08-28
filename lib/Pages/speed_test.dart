@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
-import '../controllers/speed_test_controller.dart';
+import '../Controllers/speed_test_controller.dart';
 import '../Cards/speed_card.dart';
 
 class SpeedTestPage extends StatelessWidget {

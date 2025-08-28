@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
-import 'package:task2/controllers/compressing_controller.dart';
+import 'package:task2/Controllers/compressing_controller.dart';
 import 'video_compressor.dart';
 
 class CompressingPage extends StatelessWidget {

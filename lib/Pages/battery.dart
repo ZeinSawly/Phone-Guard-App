@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:task2/Cards/banner.dart';
+import 'package:task2/Components/banner.dart';
 import 'package:task2/Cards/battery_level_card.dart';
 import 'package:task2/Cards/battery_stat_card.dart';
-import 'package:task2/Cards/navbar.dart';
-import 'package:task2/Cards/rocket_circle.dart';
+import 'package:task2/Components/navbar.dart';
+import 'package:task2/Components/rocket_circle.dart';
 import 'package:task2/Pages/battery_life.dart';
 import 'package:task2/Pages/battery_temperature.dart';
 

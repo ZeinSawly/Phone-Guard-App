@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task2/Cards/cleaning_cards.dart';
 import 'package:task2/Cards/more_cards.dart';
-import 'package:task2/Cards/navbar.dart';
-import 'package:task2/Cards/rocket_circle.dart';
+import 'package:task2/Components/navbar.dart';
+import 'package:task2/Components/rocket_circle.dart';
 
 class HomePage extends StatelessWidget {
   const   HomePage({super.key});

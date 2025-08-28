@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/passcode_controller.dart';
+import '../Controllers/passcode_controller.dart';
 
 class PasscodeSetupPage extends StatelessWidget {
   const PasscodeSetupPage({super.key});
