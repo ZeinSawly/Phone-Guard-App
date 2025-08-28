@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:task2/Cards/image_grid.dart';
+import 'package:task2/Components/image_grid.dart';
 import 'package:task2/Pages/duplicate_videos.dart';
 import 'package:task2/Pages/large_videos.dart';
 import 'package:task2/Pages/smart_media.dart';

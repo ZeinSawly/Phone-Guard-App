@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:task2/Cards/image_grid.dart';
+import 'package:task2/Components/image_grid.dart';
 import 'package:task2/Pages/blurred_images.dart';
 import 'package:task2/Pages/camera_images.dart';
 import 'package:task2/Pages/duplicates_images.dart';
