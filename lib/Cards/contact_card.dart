@@ -16,7 +16,7 @@ class ContactCard extends StatelessWidget {
       children: [
         Container(
           
-          margin: EdgeInsets.symmetric(vertical: 6, horizontal: 16),
+          margin: EdgeInsets.symmetric(vertical: 6,),
           padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -72,7 +72,7 @@ class ContactCard extends StatelessWidget {
 
         Positioned( // Positioned is used inside a stack to place a child
           top: 0, // Places the delete icon top right corner of the stack
-          right: 0,
+          right: -12,
           child: SizedBox(
               width: 80,
               height: 80,

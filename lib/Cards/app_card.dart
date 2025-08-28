@@ -16,7 +16,7 @@ class AppCard extends StatelessWidget {
       children: [
         
         Container(
-          margin: EdgeInsets.symmetric(vertical: 6, horizontal: 16),
+          margin: EdgeInsets.symmetric(vertical: 6,  ),
           padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -74,7 +74,7 @@ class AppCard extends StatelessWidget {
 
         Positioned(
           top: 0,
-          right: 0,
+          right: -12,
           child:SizedBox(
               width: 80,
               height: 80,
