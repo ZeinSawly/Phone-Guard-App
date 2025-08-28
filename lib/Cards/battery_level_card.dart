@@ -23,7 +23,7 @@ class BatteryLevelCard extends StatelessWidget {
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          FractionallySizedBox(
+          FractionallySizedBox( // A purple fill that takes up 42% of the card’s height
             heightFactor: 0.42,
             child: Container(
               decoration: BoxDecoration(

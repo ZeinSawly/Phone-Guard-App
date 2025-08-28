@@ -19,7 +19,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       backgroundColor:  Color(0xFFE9EAFF),
 
-      floatingActionButton:  GlowingCenterButton(icon: "assets/rocket.png"),
+      floatingActionButton:  GlowingCenterButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       bottomNavigationBar:  CustomBottomNavBar(selectedIndex: 3),

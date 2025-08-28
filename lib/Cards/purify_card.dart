@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class PurifyCard extends StatelessWidget {
-  final double progress;
 
-  const PurifyCard({super.key, required this.progress});
+  const PurifyCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -65,38 +64,40 @@ class PurifyCard extends StatelessWidget {
                 child: SfRadialGauge(
                   axes: <RadialAxis>[
                     RadialAxis(
-                      startAngle: 160,
-                      endAngle: 20,
-                      showTicks: false,
-                      showLabels: false,
+                      startAngle: 160, // Start at 160 degree
+                      endAngle: 20, // End at 20 degree
+                      showTicks: false, // Hide tick marks
+                      showLabels: false, // Hide labels
                       radiusFactor: 1,
-                      axisLineStyle: AxisLineStyle(
+                      
+                      axisLineStyle: AxisLineStyle( // The tracker
                         thickness: 0.15,
                         thicknessUnit: GaugeSizeUnit.factor,
                         color: Color.fromARGB(51, 255, 255, 255),
                         cornerStyle: CornerStyle.bothCurve,
                       ),
-
-                      pointers: <GaugePointer>[
+ 
+                      pointers: <GaugePointer>[ // The progress indicator
                         RangePointer(
-                          value: progress * 100,
+                          value: 62,
                           width: 0.15,
                           sizeUnit: GaugeSizeUnit.factor,
                           color: Color.fromARGB(158, 255, 255, 255), 
                           cornerStyle: CornerStyle.bothCurve,
                         ),
                       ],
-                      annotations: <GaugeAnnotation>[
+
+                      annotations: <GaugeAnnotation>[ // Put text in the middle of the gauge
                         GaugeAnnotation(
                           widget: Text(
-                            '${(progress * 100).toInt()}%',
+                            '62%',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
                           ),
-                          angle: 90,
+                          angle: 90, // Place it at the bottom of the circle
                           positionFactor: 0.1,
                         ),
                       ],
@@ -113,7 +114,7 @@ class PurifyCard extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
-              color: Colors.white.withAlpha(51),
+              color: Colors.white.withAlpha(51), // White with low opacitu (transparent)
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
@@ -125,7 +126,6 @@ class PurifyCard extends StatelessWidget {
               ),
             ),
           ),
-
         ],
       ),
     );

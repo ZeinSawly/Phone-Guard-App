@@ -8,25 +8,25 @@ class PasscodeSetupPage extends StatefulWidget {
 }
 
 class _PasscodeSetupPageState extends State<PasscodeSetupPage> {
-  List<String> passcode = [];
-  List<String> firstTry = [];
-  bool confirm = false;
+  List<String> passcode = []; // The digits the user is entering
+  List<String> firstTry = []; // The first 4 digit number
+  bool confirm = false; // False means we are in the first try
 
   void press(String num) {
-    if (passcode.length < 4) passcode.add(num);
+    if (passcode.length < 4) passcode.add(num); // If number less than 4 digits, add it to te list
 
     if (passcode.length == 4) {
-      if (!confirm) {
-        firstTry = List.from(passcode);
-        passcode.clear();
-        confirm = true;
-      } else {
-        if (passcode.join() == firstTry.join()) {
-          Navigator.pop(context);
-        } else {
-          passcode.clear();
-          firstTry.clear();
-          confirm = false;
+      if (!confirm) { // If first try
+        firstTry = List.from(passcode); // Copy the 4 digits into first try
+        passcode.clear(); // Empty the digits
+        confirm = true; // To tell the user to confirm
+      } else { // If confirm true
+        if (passcode.join() == firstTry.join()) { // Compare the 2 numbers
+          Navigator.pop(context); // If they match, close the page
+        } else { // If no match
+          passcode.clear(); // Clear passcode
+          firstTry.clear(); // Clear first try
+          confirm = false; // Let user start again
         }
       }
     }
@@ -73,19 +73,50 @@ class _PasscodeSetupPageState extends State<PasscodeSetupPage> {
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(4, (i) {
-                return Container(
+              children: [
+                Container(
                   margin: EdgeInsets.all(8),
                   width: 12,
                   height: 12,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: i < passcode.length ? Color.fromARGB(255, 215, 190, 251): Colors.transparent,
+                    color: passcode.isNotEmpty ? Color.fromARGB(255, 215, 190, 251) : Colors.transparent,
                     border: Border.all(color: Color.fromARGB(255, 215, 190, 251)),
                   ),
-                );
-              }),
+                ),
+                Container(
+                  margin: EdgeInsets.all(8),
+                  width: 12,
+                  height: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: passcode.length > 1 ? Color.fromARGB(255, 215, 190, 251) : Colors.transparent,
+                    border: Border.all(color: Color.fromARGB(255, 215, 190, 251)),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.all(8),
+                  width: 12,
+                  height: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: passcode.length > 2 ? Color.fromARGB(255, 215, 190, 251) : Colors.transparent,
+                    border: Border.all(color: Color.fromARGB(255, 215, 190, 251)),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.all(8),
+                  width: 12,
+                  height: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: passcode.length > 3 ? Color.fromARGB(255, 215, 190, 251) : Colors.transparent,
+                    border: Border.all(color: Color.fromARGB(255, 215, 190, 251)),
+                  ),
+                ),
+              ],
             ),
+
             SizedBox(height: 40),
 
             Expanded(

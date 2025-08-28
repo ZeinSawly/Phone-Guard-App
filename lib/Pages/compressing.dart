@@ -42,7 +42,7 @@ class _CompressingPageState extends State<CompressingPage> {
 
   @override
   Widget build(BuildContext context) {
-    final percent = (progress * 100).toInt();
+    final percent = (progress * 100).toInt(); // Convert progress to % for display
 
     return Scaffold(
       backgroundColor: Color(0xFFE9EAFF),
@@ -82,12 +82,14 @@ class _CompressingPageState extends State<CompressingPage> {
                     showTicks: false,
                     showLabels: false,
                     radiusFactor: 1,
+                    
                     axisLineStyle: AxisLineStyle(
                       thickness: 0.15,
                       thicknessUnit: GaugeSizeUnit.factor,
                       color: Colors.black,
                       cornerStyle: CornerStyle.bothCurve,
                     ),
+                    
                     pointers: <GaugePointer>[
                       RangePointer(
                         value: progress * 100,
@@ -97,6 +99,7 @@ class _CompressingPageState extends State<CompressingPage> {
                         cornerStyle: CornerStyle.bothCurve,
                       ),
                     ],
+                    
                     annotations: <GaugeAnnotation>[
                       GaugeAnnotation(
                         widget: Text(

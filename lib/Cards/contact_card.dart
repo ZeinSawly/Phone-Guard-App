@@ -12,7 +12,7 @@ class ContactCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      clipBehavior: Clip.none,
+      clipBehavior: Clip.none, // Allow parts to overflow outside of the card
       children: [
         Container(
           
@@ -31,8 +31,8 @@ class ContactCard extends StatelessWidget {
 
           child: Row(
             children: [
-              contact.image != null
-                      ? ClipRRect(
+              contact.image != null // If contact has an image
+                      ? ClipRRect( // Use it with circular shape
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset(
                         contact.image!,
@@ -42,7 +42,7 @@ class ContactCard extends StatelessWidget {
                       ),
                     )
 
-                  : CircleAvatar(
+                  : CircleAvatar( // If no image, use a circle avatar with the contact's first letter name
                       radius: 20,
                       backgroundColor:  Color(0xFF8D74F0),
                       child: Text(
@@ -70,8 +70,8 @@ class ContactCard extends StatelessWidget {
           ),
         ),
 
-        Positioned(
-          top: 0,
+        Positioned( // Positioned is used inside a stack to place a child
+          top: 0, // Places the delete icon top right corner of the stack
           right: 0,
           child: SizedBox(
               width: 80,

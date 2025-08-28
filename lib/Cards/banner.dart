@@ -18,9 +18,9 @@ class CustomBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(10),
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           colors: [
             Color(0xFFFDC08C),
             Color(0xFFE6A07E),
@@ -29,7 +29,7 @@ class CustomBanner extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(50),
-        boxShadow: const [
+        boxShadow: [
           BoxShadow(
             color: Color(0x22000000),
             blurRadius: 6,
@@ -42,7 +42,7 @@ class CustomBanner extends StatelessWidget {
           Container(
             width: 40,
             height: 40,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.white,
             ),
@@ -55,7 +55,9 @@ class CustomBanner extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 12),
+          
+          SizedBox(width: 12),
+          
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,10 +71,10 @@ class CustomBanner extends StatelessWidget {
                   ),
                 ),
                 if (subtitle != null) ...[
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4),
                   Text(
                     subtitle!,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 12,
                       color: Colors.white,
                     ),

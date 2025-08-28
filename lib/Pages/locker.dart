@@ -11,7 +11,7 @@ class LockerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFE9EAFF),
-      floatingActionButton: GlowingCenterButton(icon: "assets/rocket.png"),
+      floatingActionButton: GlowingCenterButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: CustomBottomNavBar(selectedIndex: 2),
       body: SafeArea(
@@ -19,7 +19,7 @@ class LockerPage extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-              SizedBox(height: 140),
+              SizedBox(height: 100),
               Image.asset("assets/lockerPage.png", width: 120),
               SizedBox(height: 16),
               Text(

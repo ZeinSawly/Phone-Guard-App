@@ -17,11 +17,11 @@ class CleaningCards extends StatelessWidget {
   offset:  Offset(0, -50), // Moves up by 50 pixels
   
   child: GridView.count(
-      crossAxisCount: 2,
-      crossAxisSpacing: 16,
-      mainAxisSpacing: 16,
+      crossAxisCount: 2, // 2 columns
+      crossAxisSpacing: 16, // 16 pixel space between columns
+      mainAxisSpacing: 16, // 16 pixel space between rows
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(), // Make the grid unscrollable
       children:  [
         InfoCard(
           title: "Smart Media",
@@ -31,7 +31,7 @@ class CleaningCards extends StatelessWidget {
           onTap: () => Get.to(() => SmartMediaPage())
         ),
         
-        PurifyCard(progress: 0.62),
+        PurifyCard(),
         
         InfoCard(
           title: "Apps Manager",

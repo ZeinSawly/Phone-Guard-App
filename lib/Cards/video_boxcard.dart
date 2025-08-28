@@ -26,7 +26,7 @@ class VideoBoxCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(18),
         child: Stack(
           children: [
-            Positioned.fill(
+            Positioned.fill( // Fills the entire card with te image
               child: Image.asset(thumbnailPath, fit: BoxFit.cover),
             ),
 

@@ -7,7 +7,7 @@ import 'package:task2/Pages/settings.dart';
 import 'navicon.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
-  final int selectedIndex;
+  final int selectedIndex; // To know which button to highlight
 
   const CustomBottomNavBar({super.key, required this.selectedIndex});
 
@@ -15,7 +15,7 @@ class CustomBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      shape: CircularNotchedRectangle(),
+      shape: CircularNotchedRectangle(), // Makes a circular hole for the rocket circle to fit in
       notchMargin: 8,
       color: Colors.white,
       child: SizedBox(
@@ -26,14 +26,14 @@ class CustomBottomNavBar extends StatelessWidget {
             NavIcon(
               icon: "assets/home.png",
               label: "Home",
-              isActive: selectedIndex == 0,
-              onTap: () => Get.to(() => const HomePage()),
+              isActive: selectedIndex == 0, // If selected index = 0, highlight it
+              onTap: () => Get.to(() => HomePage()),
             ),
             NavIcon(
               icon: "assets/battery.png",
               label: "Battery",
-              isActive: selectedIndex == 1,
-              onTap: () => Get.to(() => const BatteryPage()),
+              isActive: selectedIndex == 1, 
+              onTap: () => Get.to(() => BatteryPage()),
             ),
             SizedBox(width: 50,),
             NavIcon(

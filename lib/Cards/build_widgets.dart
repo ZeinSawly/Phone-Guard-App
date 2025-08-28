@@ -17,8 +17,8 @@ class WidgetCardContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color cardColor = colorOptions[selectedColorIndex];
-    final Color textColor = cardColor == Colors.white ? Color(0xFF6A5AE0) : Colors.white;
+    final Color cardColor = colorOptions[selectedColorIndex]; // Get the color from the color option list
+    final Color textColor = cardColor == Colors.white ? Color(0xFF6A5AE0) : Colors.white; // If card color is white, use text color as purple
 
     Widget content;
 
@@ -140,46 +140,46 @@ class WidgetCardContent extends StatelessWidget {
         final Color fixedPurple = Color(0xFF6A5AE0);
         final Color fixedText = Colors.white;
 
-  content = Center(
-    child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => ChooseContactPage()),
-        );
-      },
-      child: Container(
-        width: 160,
-        height: 160,
-        decoration: BoxDecoration(
-          color: fixedPurple,
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black12,
-              blurRadius: 6,
-              offset: Offset(0, 3),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.add, size: 40, color: fixedText),
-            SizedBox(height: 8),
-            Text(
-              "Add",
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: fixedText,
+        content = Center(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => ChooseContactPage()),
+              );
+            },
+            child: Container(
+              width: 160,
+              height: 160,
+              decoration: BoxDecoration(
+                color: fixedPurple,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 6,
+                    offset: Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.add, size: 40, color: fixedText),
+                  SizedBox(height: 8),
+                  Text(
+                    "Add",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: fixedText,
+                    ),
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
-      ),
-    ),
-  );
+          ),
+        );
 
       default:
         content = SizedBox();

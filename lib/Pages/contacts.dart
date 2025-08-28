@@ -22,7 +22,7 @@ class ContactsPage extends StatelessWidget {
                   "< Back",
                   style: TextStyle(
                     fontSize: 16,
-                    color: Color(0xFF202538),
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -35,7 +35,7 @@ class ContactsPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF202538),
+                  color: Colors.black,
                 ),
               ),
               
@@ -45,7 +45,7 @@ class ContactsPage extends StatelessWidget {
                 "Idle contacts",
                 style: TextStyle(
                   fontSize: 14,
-                  color: Color(0xFF202538),
+                  color: Colors.black,
                 ),
               ),
               

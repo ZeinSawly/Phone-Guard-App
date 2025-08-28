@@ -10,7 +10,7 @@ class CustomizeContactPage extends StatefulWidget {
 }
 
 class _CustomizeContactPageState extends State<CustomizeContactPage> {
-  bool isRounded = true;
+  bool isRounded = true; // Track if rounded or full size
   int selectedColorIndex = 0;
 
   final List<Color> colorOptions = [
@@ -56,6 +56,7 @@ class _CustomizeContactPageState extends State<CustomizeContactPage> {
                   ),
                 ],
               ),
+
               SizedBox(height: 20),
 
               Text(
@@ -130,7 +131,11 @@ class _CustomizeContactPageState extends State<CustomizeContactPage> {
                     isSelected: [isRounded, !isRounded],
                     onPressed: (index) {
                       setState(() {
-                        isRounded = index == 0;
+                        if (index == 0) {
+                          isRounded = true;   // Rounded button pressed
+                        } else {
+                          isRounded = false;  // Full Size button pressed
+                        }
                       });
                     },
                     renderBorder: false,
@@ -190,10 +195,21 @@ class _CustomizeContactPageState extends State<CustomizeContactPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: List.generate(colorOptions.length, (index) {
                         final color = colorOptions[index];
-                        final isSelected = selectedColorIndex == index;
+                        bool isSelected;
+                          if (selectedColorIndex == index) {
+                            isSelected = true;
+                          } else {
+                            isSelected = false;
+                          }
 
                         return GestureDetector(
-                          onTap: () => setState(() => selectedColorIndex = index),
+                          onTap: () {
+                            if (selectedColorIndex != index) {
+                              setState(() {
+                                selectedColorIndex = index;
+                              });
+                            }
+                          },
                           child: Container(
                             width: 24,
                             height: 24,

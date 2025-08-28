@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
 class GlowingCenterButton extends StatelessWidget {
-  final String icon;
 
   const GlowingCenterButton({
     super.key,
-    required this.icon,
   });
 
   @override
@@ -13,14 +11,16 @@ class GlowingCenterButton extends StatelessWidget {
     return Container(
       width: 64,
       height: 64,
-      decoration: BoxDecoration(
+      
+      decoration: BoxDecoration( // To make it a circle with a gradient color
         shape: BoxShape.circle,
         gradient:  RadialGradient(
           colors: [Color(0xFFC6E6FF), Color(0xFF8D6FF5)],
           center: Alignment.topRight,
           radius: 1.3,
         ),
-        boxShadow: [
+        
+        boxShadow: [ // To add shadows to make it glow
           BoxShadow(
             color: Color(0x556C63FF),
             blurRadius: 20,

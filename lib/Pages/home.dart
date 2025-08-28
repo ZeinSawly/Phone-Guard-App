@@ -12,8 +12,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFFE9EAFF),
 
-      floatingActionButton: GlowingCenterButton(icon: "assets/rocket.png"),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: GlowingCenterButton(), // The rocket circle button
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked, // Place the button in bottom center, but dock it into the bottom bar
 
       bottomNavigationBar:  CustomBottomNavBar(selectedIndex: 0),
 

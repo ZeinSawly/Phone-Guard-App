@@ -16,7 +16,7 @@ class BatteryPage extends StatelessWidget {
 
     return Scaffold(
 
-      floatingActionButton: GlowingCenterButton(icon: "assets/rocket.png"),
+      floatingActionButton: GlowingCenterButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       bottomNavigationBar:  CustomBottomNavBar(selectedIndex: 1),

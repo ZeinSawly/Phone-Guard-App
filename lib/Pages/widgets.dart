@@ -10,8 +10,8 @@ class WidgetsPage extends StatefulWidget {
 }
 
 class _WidgetsPageState extends State<WidgetsPage> {
-  int selectedIndex = 0;
-  int selectedColorIndex = 0;
+  int selectedIndex = 0; // Track which tab is selected
+  int selectedColorIndex = 0; // Track which color is selected
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,8 @@ class _WidgetsPageState extends State<WidgetsPage> {
                         ),
                       ],
                     ),
-                     SizedBox(height: 20),
+                    
+                    SizedBox(height: 20),
 
                     Container(
                       decoration: BoxDecoration(
@@ -67,12 +68,12 @@ class _WidgetsPageState extends State<WidgetsPage> {
                         borderRadius: BorderRadius.circular(14),
                       ),
                       child: ToggleButtons(
-                        renderBorder: false,
+                        renderBorder: false, // Hide borders
                         borderRadius: BorderRadius.circular(14),
-                        fillColor:  Color.fromARGB(255, 114, 109, 189),
+                        fillColor:  Color.fromARGB(255, 114, 109, 189), // Color of selected button
                         selectedColor: Colors.white,
-                        color: Colors.black,
-                        isSelected: [
+                        color: Colors.black, // Text color of unselected buttons
+                        isSelected: [ // Which tab is selected
                           selectedIndex == 0,
                           selectedIndex == 1,
                           selectedIndex == 2,
@@ -125,7 +126,7 @@ class _WidgetsPageState extends State<WidgetsPage> {
               ),
             ),
 
-            if (selectedIndex != 2)
+            if (selectedIndex != 2) // Only show the button for the first 2 tbs
               Positioned(
                 bottom: 20,
                 left: 20,

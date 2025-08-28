@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:task2/Pages/customize_contact.dart';
 
 class ChooseContactPage extends StatelessWidget {
@@ -56,12 +57,7 @@ class ChooseContactPage extends StatelessWidget {
 
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => CustomizeContactPage(contactName: "Amy"),
-                    ),
-                  );
+                    Get.to(() => CustomizeContactPage(contactName: "Amy"));
                 },
                 child: Text(
                   "Amy", 

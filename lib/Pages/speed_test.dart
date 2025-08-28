@@ -17,12 +17,12 @@ class _SpeedTestPageState extends State<SpeedTestPage> {
   double download = 0.0;
   double upload = 0.0;
   int ping = 0;
-  bool isTesting = false;
+  bool isTesting = false; // To disable button while testing
 
-  Timer? fluctuationTimer;
+  Timer? fluctuationTimer; // Simulates changing speed during the test
 
   void startTest() {
-    setState(() {
+    setState(() { // Reset values and mark as running
       isTesting = true;
       speed = 0;
       download = 0;
@@ -30,14 +30,14 @@ class _SpeedTestPageState extends State<SpeedTestPage> {
       ping = 0;
     });
 
-    fluctuationTimer = Timer.periodic(Duration(milliseconds: 200), (timer) {
+    fluctuationTimer = Timer.periodic(Duration(milliseconds: 200), (timer) { // Every 200ms, update speed with a random number between 0 and 10
       setState(() {
         speed = double.parse((Random().nextDouble() * 10).toStringAsFixed(2));
       });
     });
 
 
-    Future.delayed(Duration(seconds: 6), () {
+    Future.delayed(Duration(seconds: 6), () { // After 6 seconds, stop the timer and set final values
       fluctuationTimer?.cancel();
       setState(() {
         speed = 5.98;
@@ -57,7 +57,7 @@ class _SpeedTestPageState extends State<SpeedTestPage> {
 
   @override
   Widget build(BuildContext context) {
-    final speedText = speed.toStringAsFixed(2);
+    final speedText = speed.toStringAsFixed(2); // CHange to a string to add to the gauge
 
     return Scaffold(
       backgroundColor: Color(0xFFE9EAFF),
@@ -98,12 +98,14 @@ class _SpeedTestPageState extends State<SpeedTestPage> {
                     showTicks: false,
                     showLabels: false,
                     radiusFactor: 1,
+                    
                     axisLineStyle: AxisLineStyle(
                       thickness: 0.15,
                       thicknessUnit: GaugeSizeUnit.factor,
                       color: Colors.black,
                       cornerStyle: CornerStyle.bothCurve,
                     ),
+                    
                     pointers: <GaugePointer>[
                       RangePointer(
                         value: speed,
@@ -113,6 +115,7 @@ class _SpeedTestPageState extends State<SpeedTestPage> {
                         cornerStyle: CornerStyle.bothCurve,
                       ),
                     ],
+                    
                     annotations: <GaugeAnnotation>[
                       GaugeAnnotation(
                         widget: Column(
